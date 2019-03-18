@@ -10,9 +10,9 @@ import { Component, OnInit, Input, OnChanges } from '@angular/core';
 export class TentativasComponent implements OnInit , OnChanges
 {
  
-  @Input() public tentativa : number
+  @Input() public tentativas : number
   
-  public coracaoes : Coracao[] = [new Coracao(true),new Coracao(true), new Coracao(true)]
+  public Coracao : Coracao[] = [new Coracao(),new Coracao(), new Coracao()]
   constructor() 
   {
     
@@ -21,13 +21,11 @@ export class TentativasComponent implements OnInit , OnChanges
    ngOnChanges()
    {
     let indice: number  = 0
-    if(this.tentativa !== this.coracaoes.length)
+  
+    if(this.tentativas !== this.Coracao.length)
     {
-       indice = this.coracaoes.length - this.tentativa
-      console.log(indice)
-      this.coracaoes[indice-1].cheio = false
-     
-    
+       indice = this.Coracao.length - this.tentativas
+      this.Coracao[indice-1].cheio = false     
     }
    
    }

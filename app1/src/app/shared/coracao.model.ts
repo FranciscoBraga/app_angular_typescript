@@ -5,14 +5,14 @@ export class Coracao{
      public urlCoracaoVazio : string = ""
      public urlCoracaoCheio : string = ""
 
-    constructor(value: boolean){
-        this.cheio = value
+    constructor(){
+        this.cheio = true
         this.urlCoracaoCheio = "/assets/coracao_cheio.png"
         this.urlCoracaoVazio = "/assets/coracao_vazio.png"
     }
 
     public exibeCoracao(){
-        if(this.cheio = true){
+        if(this.cheio == true){
            return this.urlCoracaoCheio
         }
         else{
